@@ -4,16 +4,6 @@ import { ActionForm } from "./ActionForm";
 import { loadFromStorage, saveToStorage } from "../utils/storage";
 import { TrashIcon } from "@heroicons/react/24/outline";
 
-// Example Rogue actions
-const cunningAction: Action = {
-  name: "Cunning Action",
-  type: "Bonus Action",
-  source: "Rogue (Level 2)",
-  description: [
-    "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.",
-  ],
-};
-
 export function Actions() {
   const [actions, setActions] = useState<Action[]>([]);
   const [showForm, setShowForm] = useState(false);
@@ -22,8 +12,6 @@ export function Actions() {
     const savedActions = loadFromStorage<Action[]>("ACTIONS");
     if (savedActions) {
       setActions(savedActions);
-    } else {
-      setActions([cunningAction]);
     }
   }, []);
 
