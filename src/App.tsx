@@ -2,6 +2,7 @@ import { useState } from "react";
 import SpellDialog from "./components/Dialog";
 import { SpellForm } from "./components/SpellForm";
 import type { Spell } from "./components/Dialog";
+import { DiceRoller } from "./components/DiceRoller";
 
 const animalMessenger: Spell = {
   name: "Animal Messenger",
@@ -53,6 +54,7 @@ function App() {
           </div>
         ))}
       </div>
+      <DiceRoller />
     </div>
   );
 }
