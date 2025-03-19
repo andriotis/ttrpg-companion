@@ -8,18 +8,13 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Button } from "./components/ui/button";
 
 function App() {
   return (
-    <div className="flex h-lvh items-center justify-center">
+    <div className="flex h-lvh w-lvw items-center justify-center">
       <Drawer>
-        <DrawerTrigger className="flex flex-row">
-          <Search className="inline" />
-          <span>Search</span>
-        </DrawerTrigger>
+        <DrawerTrigger className="text-xl">Open</DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle>Are you absolutely sure?</DrawerTitle>
